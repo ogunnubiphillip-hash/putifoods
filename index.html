@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PUTI Foods | Premium Nigerian Agriculture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="theme-color" content="#002c13">
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#14512d",
+                        "tertiary": "#520005",
+                        "surface-dim": "#dfd9d1",
+                        "on-surface": "#1d1b16",
+                        "surface-container-low": "#f9f3ea",
+                        "surface-container": "#f3ede4",
+                        "surface-variant": "#e7e2d9",
+                        "secondary-fixed": "#ffdbcd",
+                        "outline": "#717970",
+                        "inverse-surface": "#32302a",
+                        "primary-fixed-dim": "#97d5a5",
+                        "on-secondary-fixed": "#360f00",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#7c2e00",
+                        "secondary": "#a23f00",
+                        "tertiary-container": "#7b000b",
+                        "surface-container-highest": "#e7e2d9",
+                        "surface-bright": "#fff9f0",
+                        "tertiary-fixed-dim": "#ffb3ac",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#ff7d73",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#014421",
+                        "on-tertiary-fixed": "#410003",
+                        "on-primary-container": "#76b284",
+                        "on-primary-fixed": "#00210d",
+                        "surface": "#fff9f0",
+                        "secondary-fixed-dim": "#ffb595",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#581f00",
+                        "on-surface-variant": "#404941",
+                        "inverse-primary": "#97d5a5",
+                        "error-container": "#ffdad6",
+                        "primary": "#002c13",
+                        "primary-fixed": "#b2f1bf",
+                        "on-background": "#1d1b16",
+                        "on-tertiary-fixed-variant": "#930010",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#ede7df",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#fd6c19",
+                        "inverse-on-surface": "#f6f0e7",
+                        "on-primary": "#ffffff",
+                        "background": "#fff9f0",
+                        "surface-tint": "#306a43",
+                        "outline-variant": "#c0c9be"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-card {
+            background: #ffffff;
+            box-shadow: 0px 4px 20px rgba(0, 44, 19, 0.04);
+            transition: all 0.3s ease-in-out;
+        }
+        .premium-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0px 8px 30px rgba(0, 44, 19, 0.08);
+        }
+        .nav-link-active {
+            color: #002c13;
+            font-weight: 600;
+            position: relative;
+        }
+        .nav-link-active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #002c13;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+        .accordion-item.active .icon-rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0px_4px_20px_rgba(0,44,19,0.04)]">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between px-4 md:px-8 lg:px-16 py-4">
+<div class="flex items-center gap-4">
+    <button id="menuBtn" class="md:hidden text-primary text-3xl">
+  ☰
+</button>
+<img src="images/logo.png" alt="" class="h-12 md:h-16 lg:h-8 w-auto">
+<span class="text-lg md:text-2xl font-bold text-primary">
+  PUTI Foods
+</span>
+</div>
+<nav class="hidden md:flex items-center gap-gutter text-on-surface-variant font-label-md">
+<a class="nav-link-active transition-colors hover:text-primary" href="#home">Home</a>
+<a class="transition-colors hover:text-primary" href="#products">Products</a>
+<a class="transition-colors hover:text-primary" href="#about">About Us</a>
+<a class="transition-colors hover:text-primary" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="https://wa.me/234XXXXXXXXXX"
+   class="bg-green-600 text-white text-sm md:text-base px-3 md:px-6 py-2 md:py-3 rounded-full whitespace-nowrap">
+  Order on WhatsApp
+</a>
+</div>
+</div>
+
+<div id="mobileMenu" class="hidden flex flex-col gap-4 p-4 bg-white shadow-md md:hidden">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</div>
+
+</header>
+
+
+<!-- Hero Section -->
+<section class="pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-8 lg:px-16 bg-surface" id="home">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>100% Authentic Nigerian Agriculture</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">Nourishing Lives with Heritage and Purity</h1>
+<p class="text-body-lg text-on-surface-variant max-w-lg">
+                    Experience the richness of Nigerian tradition through our premium, hygienically processed foods. From vibrant palm oil to the finest garri, we bring the farm's heart to your table.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-title-lg hover:scale-[1.02] transition-transform">Shop Collections</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-title-lg hover:bg-primary/5 transition-colors">Bulk Orders</button>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
+<div>
+<p class="font-headline-sm text-primary">10k+</p>
+<p class="text-label-md text-on-surface-variant">Happy Customers</p>
+</div>
+<div class="w-[1px] h-10 bg-outline-variant"></div>
+<div>
+<p class="font-headline-sm text-primary">100%</p>
+<p class="text-label-md text-on-surface-variant">Hygienic Process</p>
+</div>
+</div>
+</div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl mt-8 md:mt-0">
+<img alt="PUTI Foods Premium Packaged Products" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" src="images/hero.jpg"/>
+</div>
+</div>
+</section>
+<!-- Why Choose Us: 8 Cards Grid -->
+<section class="py-24 bg-surface-container-low px-margin-desktop">
+<div class="max-w-[1280px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-primary mb-4">The PUTI Difference</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">We bridge traditional farming with modern precision to ensure every meal you prepare is backed by quality.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Purity Guaranteed</h3>
+<p class="text-body-md text-on-surface-variant">Unadulterated products processed in clean, controlled environments.</p>
+</div>
+<!-- Card 2 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">agriculture</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Ethically Sourced</h3>
+<p class="text-body-md text-on-surface-variant">Supporting local Nigerian farmers through fair trade and partnership.</p>
+</div>
+<!-- Card 3 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">sanitizer</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Modern Hygiene</h3>
+<p class="text-body-md text-on-surface-variant">Automated packaging systems to ensure zero-contamination.</p>
+</div>
+<!-- Card 4 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Authentic Taste</h3>
+<p class="text-body-md text-on-surface-variant">Retaining the natural flavors of traditional Nigerian cuisine.</p>
+</div>
+<!-- Card 5 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Prompt Delivery</h3>
+<p class="text-body-md text-on-surface-variant">Carefully handled logistics to bring freshness to your doorstep.</p>
+</div>
+<!-- Card 6 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Bulk Capacity</h3>
+<p class="text-body-md text-on-surface-variant">Ready to scale for weddings, retailers, and export markets.</p>
+</div>
+<!-- Card 7 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Quality Checks</h3>
+<p class="text-body-md text-on-surface-variant">Rigorous testing at every stage of the food processing cycle.</p>
+</div>
+<!-- Card 8 -->
+<div class="premium-card p-8 rounded-2xl flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">favorite</span>
+</div>
+<h3 class="font-title-lg text-primary mb-2">Heritage First</h3>
+<p class="text-body-md text-on-surface-variant">Preserving the culinary legacy of Nigeria for future generations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products: 3-Column Grid -->
+<section class="py-24 px-margin-desktop" id="products">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-md text-primary mb-4">The Heritage Collection</h2>
+<p class="text-body-lg text-on-surface-variant max-w-xl">Premium essentials for the discerning modern kitchen.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-title-lg hover:translate-x-2 transition-transform">
+                    View All Products <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="premium-card rounded-3xl overflow-hidden group">
+<div class="h-80 overflow-hidden">
+<img alt="Premium Palm Oil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLs61iiP4ux8ZV0q1d4nepKD-mNKGy1CH13I_Z9Zm53ZjBr6Pk_6D7R3IKktxdGyZjH6XxE51pN44SX2qg8U4vfntQrazziYQtASOgIEyna7S9ujoVSj9GYiQCEjgZQrp3T1wjWOS3UHzeP6jlnvd2FWT5xQ6k5mDGfQ5Nd8HETnO5OEkHvWKCsUlGA852qafF_WEGyyDfFkKf9D24bH-gUZKkVmGhMBuqYRFBCZvt32puAbUViJjcZXgA"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-label-md rounded-full">Top Seller</span>
+<span class="font-headline-sm text-primary">₦4,500</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-2">Premium Palm Oil</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Rich, unadulterated red oil extracted from high-quality palm fruits for that authentic Nigerian flavor.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-full font-title-lg active:scale-95 transition-all">Add to Cart</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="premium-card rounded-3xl overflow-hidden group">
+<div class="h-80 overflow-hidden">
+<img alt="Ijebu Garri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuDM34NTwPVF6vzFaHn_21iT0HMnvhPy8lRv4U8pTvyWUQDG-UAkx0hELlinDJGkfuFERDxnIjJleLPVqUfLcDExLHhrLr4W6mwKIUAUM9H-8ddmRQVMAZnInf8mWgrTVbFwqOscXpg3JAUX298syYQ_8zuTL3VvsokgIMuvOPwScsn14Y74hoA4wRN-NoMQ_I-O0ysJOOsiJR_e3Vkkw8qDbkgvhMLnq5GfNIkK7_Q_-9kkqkN_ObU3_s"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-label-md rounded-full">Limited Stock</span>
+<span class="font-headline-sm text-primary">₦2,200</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-2">Ijebu Garri</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Fine, crunchy, and pleasantly sour. Perfectly processed for drinking or as a solid side with your favorite soup.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-full font-title-lg active:scale-95 transition-all">Add to Cart</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="premium-card rounded-3xl overflow-hidden group">
+<div class="h-80 overflow-hidden">
+<img alt="Blended Dried Pepper" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvYXI89-Gmu9gelePphXJ3k91vd6luvEOMapGXGRzU9cZmwSkltmoVaB-ewZw16DN8CJx0ZeyA7gNliKYoBcKAW8abCWqM1GRGx7pu2IcaWNsgYma62d5AoEt9DzmtRAlIxls9BeK84TcOBEn7S1Sf3LQUqEnP3i68PrjES_LACiCnXtvfIbnMAhgdnbe6fB1TRa8emgoMmk4dO8hnX_vARoHtacctZz0QMnCacW_d1cZgpCFsQGYVHXsY"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-label-md rounded-full">Chef's Choice</span>
+<span class="font-headline-sm text-primary">₦1,800</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-2">Dried Pepper</h3>
+<p class="text-body-md text-on-surface-variant mb-6">Finely blended, vibrant red dried pepper. High heat and intense flavor to elevate your culinary creations.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-full font-title-lg active:scale-95 transition-all">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bulk & Souvenir Immersive Banner -->
+<section class="relative py-32 px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="An atmospheric, cinematic high-resolution photograph of a sun-drenched Nigerian farm during the golden hour, with soft warm lighting illuminating green crops and traditional thatched storage units. The aesthetic is premium, clean, and evokes a sense of abundance and agricultural heritage." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBepAidsyydz_BdWUOXlphPzwXPIENp_cksIbafqP_HSD6DspQqzzOB3ZgqwI6S6HQXI50gizcadbAQFf6c7X1-6GtvRyB765pP4rhtT_OEBH5puGSLWEiDfydgdn0HvZvgLWKYxRtqd1yn7d3mvK2TJ9AMHu3mKq7PT--akfnQ6uggdGVTrBMToggXbeVwt9WmsQzf9FNK9K59luhTFpFx2_f_btYYhf1giyTFKcgcJFhbFNM3Gp693XqL5aZnf6CIJ8jeXxeQNuw')"></div>
+<div class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto text-center">
+<h2 class="font-display-lg text-display-lg text-on-primary mb-6">Elevate Your Events &amp; Business</h2>
+<p class="text-body-lg text-on-primary/90 max-w-3xl mx-auto mb-10">
+                From luxury wedding souvenirs to restaurant bulk supply, PUTI Foods provides bespoke packaging and wholesale pricing that reflects your standard of excellence.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary text-on-secondary px-10 py-5 rounded-full font-title-lg hover:scale-105 transition-transform">Enquire for Bulk</button>
+<button class="bg-white text-primary px-10 py-5 rounded-full font-title-lg hover:bg-surface-bright transition-colors">Gift Box Catalog</button>
+</div>
+</div>
+</section>
+<!-- About & Commitment: Split Screen -->
+<section class="py-24 px-margin-desktop bg-surface" id="about">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-xl">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional portrait of a smiling Nigerian female chef or farmer in a clean, modern white apron, standing in a brightly lit, hygienic processing facility. She is holding a bowl of fresh, clean agricultural products, symbolizing the brand's commitment to quality and human touch in food production." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLbdryhqvgoMKtOpRuSnS4nqDSN1YZlKqLXn-sB-3TNZnrXpm7XLvG0Ea5Q_Hbsv9CKVEr8oZTmZcjuUcNcvY-PYKSb9soEeHBWwYkvl5gjMWF7siJdu5yFRv6oohyA3l5fGMNijSf2sV-Nvts5-JzjSmeyiCMBCPn7li63VkOVruJl6QmN8JUGEqjZSdjXYAagKA_dSZZXbcwh29K7IqOTmvTZh2Rgn-1EidHiCngX9n0pi01HVmD-7Q4FJSEEMJMH2bNXOjqhEM')"></div>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-primary p-8 rounded-2xl text-on-primary hidden lg:block max-w-xs shadow-2xl">
+<p class="font-headline-sm mb-2">Our Mission</p>
+<p class="text-body-md opacity-90">To bring the pure, unadulterated essence of Nigerian harvests to global homes with modern safety standards.</p>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="font-headline-md text-primary">Rooted in Tradition, Driven by Precision</h2>
+<p class="text-body-lg text-on-surface-variant">
+                    At PUTI Foods, we believe that high-quality food should be accessible without compromising on traditional methods. Our processing facility combines artisanal knowledge passed through generations with rigorous modern quality control.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex flex-col sm:flex-row gap-4">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+<div>
+<p class="font-title-lg text-primary">Farm-to-Table</p>
+<p class="text-label-md text-on-surface-variant">Direct sourcing from local farms ensures peak freshness.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+<div>
+<p class="font-title-lg text-primary">No Additives</p>
+<p class="text-label-md text-on-surface-variant">Pure products with 100% natural ingredients only.</p>
+</div>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-title-lg flex items-center gap-2">
+                    Discover Our Story <span class="material-symbols-outlined">arrow_outward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Delivery Section: Visual Map & Coverage -->
+<section class="py-24 bg-surface-container-high px-margin-desktop">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-md text-primary mb-6">Wherever You Are, We Deliver</h2>
+<p class="text-body-lg text-on-surface-variant mb-10">We operate a sophisticated logistics network ensuring that your premium Nigerian staples reach you in perfect condition, across Lagos and beyond.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-xl bg-primary/10">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+</div>
+<div>
+<h4 class="font-title-lg text-primary">Express Delivery (Lagos)</h4>
+<p class="text-body-md text-on-surface-variant">Same-day or Next-day delivery for all urban Lagos areas.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-xl bg-primary/10">
+<span class="material-symbols-outlined text-primary">public</span>
+</div>
+<div>
+<h4 class="font-title-lg text-primary">Interstate Shipping</h4>
+<p class="text-body-md text-on-surface-variant">Secure, tracked shipping to all major Nigerian cities within 3-5 days.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-xl bg-primary/10">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span>
+</div>
+<div>
+<h4 class="font-title-lg text-primary">International Orders</h4>
+<p class="text-body-md text-on-surface-variant">Bringing a taste of home to the diaspora with compliant packaging.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden shadow-lg h-[400px] bg-surface-bright relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A stylised, minimalist vector-style map of Lagos, Nigeria, highlighting key delivery hubs with elegant forest green icons. The map uses a clean cream and light grey palette, fitting the corporate modern aesthetic of the brand." data-location="Lagos, Nigeria" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLWMJda5DpTyyfivqM3083fXECBo0GastFNmAcBeFUhKuVuOuTojYuV7dLbe3EIv18PnYZGpogBWTIFs1XNi6u-OGDI0Kv34xdgwi0RxANLso7JZL8xBhYzr1YddVd-F7Od9qiyXmSb2d1LNYBvB8HB56K45RngwLWpjXhu5so85fRVAKEOBg_I0tey8waUEfRS5HcDKPE00QblcEdFahdZNJO-IssLpyVXjJK6CCvCsYN0akix6vogW05ZXMsIesJSSIEqF-MpZ4')"></div>
+<div class="absolute bottom-6 right-6 bg-white p-4 rounded-xl shadow-lg border border-outline-variant">
+<p class="text-label-md font-bold text-primary">Main Hub: Ikeja, Lagos</p>
+<p class="text-label-md text-on-surface-variant">Status: Open for Deliveries</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Grid -->
+<section class="py-24 px-margin-desktop bg-surface">
+<div class="max-w-[1280px] mx-auto">
+<h2 class="font-headline-md text-primary text-center mb-16">Loved by Families &amp; Chefs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="premium-card p-10 rounded-3xl flex flex-col justify-between">
+<div>
+<div class="flex text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg text-on-surface italic mb-8">"The quality of the Palm Oil is unmatched. You can see and taste the difference immediately. It’s the only brand I trust for my kitchen now."</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<p class="font-title-lg text-primary">Tunde Adebayor</p>
+<p class="text-label-md text-on-surface-variant">Home Chef, Lagos</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="premium-card p-10 rounded-3xl flex flex-col justify-between">
+<div>
+<div class="flex text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg text-on-surface italic mb-8">"We used PUTI Foods for our wedding souvenirs and the feedback was incredible. The packaging was so elegant and the garri was perfectly crunchy."</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<p class="font-title-lg text-primary">Chioma Obi</p>
+<p class="text-label-md text-on-surface-variant">Event Planner</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="premium-card p-10 rounded-3xl flex flex-col justify-between">
+<div>
+<div class="flex text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg text-on-surface italic mb-8">"Hygienic processing was my main concern, but after visiting their facility, I am a customer for life. Professionalism at its peak."</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest"></div>
+<div>
+<p class="font-title-lg text-primary">Engr. Kolawole</p>
+<p class="text-label-md text-on-surface-variant">Regular Customer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-24 px-margin-desktop bg-surface-container-low">
+<div class="max-w-[800px] mx-auto">
+<h2 class="font-headline-md text-primary text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="accordion-item premium-card rounded-2xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-6 flex items-center justify-between">
+<h4 class="font-title-lg text-primary">How do you ensure the palm oil is unadulterated?</h4>
+<span class="material-symbols-outlined icon-rotate transition-transform">expand_more</span>
+</div>
+<div class="accordion-content bg-surface-container px-6 pb-6">
+<p class="text-body-md text-on-surface-variant">We source directly from trusted plantation partners and perform cold-press extraction. Each batch undergoes laboratory testing for purity, density, and color consistency before bottling.</p>
+</div>
+</div>
+<div class="accordion-item premium-card rounded-2xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-6 flex items-center justify-between">
+<h4 class="font-title-lg text-primary">Do you offer international shipping to the UK or USA?</h4>
+<span class="material-symbols-outlined icon-rotate transition-transform">expand_more</span>
+</div>
+<div class="accordion-content bg-surface-container px-6 pb-6">
+<p class="text-body-md text-on-surface-variant">Yes! We have specialized packaging that meets international food safety standards for export. Shipping rates vary by weight and destination country.</p>
+</div>
+</div>
+<div class="accordion-item premium-card rounded-2xl overflow-hidden cursor-pointer" onclick="this.classList.toggle('active')">
+<div class="p-6 flex items-center justify-between">
+<h4 class="font-title-lg text-primary">Can I customize the souvenir packaging for an event?</h4>
+<span class="material-symbols-outlined icon-rotate transition-transform">expand_more</span>
+</div>
+<div class="accordion-content bg-surface-container px-6 pb-6">
+<p class="text-body-md text-on-surface-variant">Absolutely. We offer customized labeling and luxury gift box options for weddings, corporate gifts, and special celebrations. Contact our sales team for a custom quote.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest pt-20 pb-10 px-margin-desktop" id="contact">
+<div class="max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+<div class="space-y-6">
+<span class="font-display-lg text-primary tracking-tight text-headline-md block">PUTI Foods</span>
+<p class="text-body-md text-on-surface-variant">Premium Nigerian agricultural products, processed with heritage and precision for the modern lifestyle.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-title-lg text-primary mb-6">Quick Links</h5>
+<ul class="space-y-4 text-on-surface-variant font-label-md">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Products</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bulk Orders</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Recipe Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-title-lg text-primary mb-6">Support</h5>
+<ul class="space-y-4 text-on-surface-variant font-label-md">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wholesale</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Return Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-title-lg text-primary mb-6">Contact Us</h5>
+<ul class="space-y-4 text-on-surface-variant font-label-md">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<span>Ikeja Industrial Estate, Lagos, Nigeria</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<span>+234 800 PUTI FOOD</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+<span>hello@putifoods.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-10 text-center">
+<p class="text-body-md text-on-surface-variant">© 2024 PUTI Foods. Premium Nigerian Agriculture. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Micro-interaction for scroll reveal
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Initialize first FAQ item as active
+        document.querySelector('.accordion-item').classList.add('active');
+    </script>
+    
+    <script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+</body></html>
